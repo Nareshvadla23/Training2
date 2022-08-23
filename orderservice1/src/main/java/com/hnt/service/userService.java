@@ -8,12 +8,16 @@ import com.hnt.entity.User;
 
 @Service
 public class userService {
-	
+
 	@Autowired
 	userRepository UserRepository;
 
 	public void saveUser(User user) {
 		UserRepository.save(user);
+	}
+
+	public Iterable<User> getUser() {
+		return UserRepository.findAll();
 	}
 
 }

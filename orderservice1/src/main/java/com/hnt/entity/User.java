@@ -3,6 +3,8 @@ package com.hnt.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class User {
@@ -10,7 +12,9 @@ public class User {
 	@Id
 	@GeneratedValue
 	private Integer id;
+	@NotBlank(message ="Name should not be blank")
 	private String name;
+	@Min(value = 1,message = "age should not be less than 1")
 	private Integer age;
 	public Integer getId() {
 		return id;
