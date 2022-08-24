@@ -3,14 +3,14 @@ package com.hnt.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.hnt.userRepository;
+import com.hnt.UserRepository;
 import com.hnt.entity.User;
 
 @Service
-public class userService {
+public class UserService {
 
 	@Autowired
-	userRepository UserRepository;
+	UserRepository UserRepository;
 
 	public void saveUser(User user) {
 		UserRepository.save(user);
