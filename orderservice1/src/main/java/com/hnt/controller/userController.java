@@ -37,6 +37,7 @@ public class userController {
 		userservice.saveUser(user);
 		System.out.println(user.getAge());
 		System.out.println(user.getName());
+		System.out.println(user.getAddress());
 
 	}
 
@@ -46,6 +47,7 @@ public class userController {
 		userservice.saveUser(user);
 		System.out.println(user.getAge());
 		System.out.println(user.getName());
+		System.out.println(user.getAddress());
 
 	}
 	@GetMapping("/all")
