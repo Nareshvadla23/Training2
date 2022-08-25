@@ -12,8 +12,9 @@ public class UserService {
 	@Autowired
 	UserRepository UserRepository;
 
-	public void saveUser(User user) {
+	public User saveUser(User user) {
 		UserRepository.save(user);
+		return user;
 	}
 
 	public Iterable<User> getUser() {

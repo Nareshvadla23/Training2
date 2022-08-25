@@ -55,12 +55,14 @@ public class UserController {
 	}
 
 	@PostMapping
-	void saveUser1(@Valid @RequestBody User user) {
+	Integer saveUser1(@Valid @RequestBody User user) {
 
 		userservice.saveUser(user);
 		System.out.println(user.getAge());
 		System.out.println(user.getName());
 		System.out.println(user.getAddress());
+		
+		return user.getId();
 
 	}
 
