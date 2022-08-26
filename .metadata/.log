@@ -6151,3 +6151,18 @@ Caused by: java.net.SocketException: Connection reset
 	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160)
 	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:110)
 	... 18 more
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-26 17:48:21.583
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.OEsjdhVi
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-26 17:48:21.584
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.OEsjdhVi
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-26 17:48:21.584
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-26 17:48:21.585
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.OEsjdhVi => OK
+
+!ENTRY org.eclipse.ui 2 2 2022-08-26 17:48:23.444
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
