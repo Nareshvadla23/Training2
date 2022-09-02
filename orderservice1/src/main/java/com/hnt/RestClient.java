@@ -1,7 +1,5 @@
 package com.hnt;
 
-import java.util.HashMap;
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 

@@ -1,6 +1,4 @@
-package com.hnt.entity;
-
-import java.util.Date;
+package com.hnt.office.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,32 +6,16 @@ import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
-import lombok.Data;
-
 @Entity
-@Data
-public class User {
+public class Employee {
 
 	@Id
 	@GeneratedValue
 	private Integer id;
 	@NotBlank(message = "Name should not be blank")
 	private String name;
-	@Min(value = 1, message = "age should not be less than 1")
+	@Min(value = 1)
 	private Integer age;
-
-	private String address;
-	
-	@NotBlank
-	private Date date;
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
 
 	public Integer getId() {
 		return id;
@@ -58,5 +40,12 @@ public class User {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", age=" + age + "]";
+	}
+	
+	
 
 }

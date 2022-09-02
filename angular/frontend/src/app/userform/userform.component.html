@@ -1,5 +1,11 @@
 <div>
-<input [(ngModel)]='user.name'> {{user.name}}
+<input [(ngModel)]='user.name'>
 <input [(ngModel)]='user.age'>
-<button (click)='saveUser()'>Save</button>
+<input type="date" placeholder="dob" [(ngModel)]='user.dob'>
+<button (click)='saveUser()' class='btn btn-success'>Save</button>
+<ol >
+   <li *ngFor="let user of users">
+      {{user.name}}, {{user.age}}, {{user.dob| date }} <button class='btn btn-danger' (click)='deleteUser(user.id)'>Delete</button>
+   </li>
+</ol>
 </div>

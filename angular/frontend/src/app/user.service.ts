@@ -7,8 +7,17 @@ const URL ="http://localhost:8082/user"
 })
 export class UserService {
 
+  deleteUser(id: any) {
+    return this.http.delete(URL+"/"+id);
+  }
+
   save(user: any) {
-    return this.http.post(URL,user);
+    return this.http.post(URL+"/age/"+22,user);
+  }
+
+  getUsers()
+  {
+    return this.http.get(URL);
   }
 
   constructor(public http:HttpClient) { }

@@ -13,6 +13,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,7 +33,7 @@ public class UserController {
 	@Autowired
 	UserService userservice;
 
-	@GetMapping
+	@GetMapping("/all")
 	String getUser() {
 		return "test";
 	}
@@ -49,7 +50,7 @@ public class UserController {
 
 		headers.add("headerfromserver", "success");
 
-		ResponseEntity response = new ResponseEntity<>(headers, HttpStatus.CREATED);
+		ResponseEntity response = new ResponseEntity<>(user,headers, HttpStatus.CREATED);
 
 		return response;
 
@@ -67,7 +68,7 @@ public class UserController {
 
 	}
 
-	@GetMapping("/all")
+	@GetMapping
 	Iterable<User> getUser1() {
 		return userservice.getUser();
 	}
@@ -84,6 +85,11 @@ public class UserController {
 		});
 
 		return errors;
+	}
+	
+	@DeleteMapping("/{userid}")
+	void deleteUser(@PathVariable int userid) {
+		userservice.delete(userid);	
 	}
 
 }
